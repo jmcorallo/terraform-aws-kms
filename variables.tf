@@ -18,8 +18,8 @@ variable "alias" {
   default     = ""
 
   validation {
-    condition     = var.alias == "" || can(regex("^alias\\/.+", var.alias))
-    error_message = "The name must start with the word 'alias' followed by a forward slash"
+    condition     = var.alias == "" || can(regex("^alias\/.+", var.alias))
+    error_message = "The name must start with the word 'alias' followed by a forward slash."
   }
 }
 
@@ -42,7 +42,7 @@ variable "deletion_window_in_days" {
 
   validation {
     condition     = var.deletion_window_in_days >= 7 && var.deletion_window_in_days <= 30
-    error_message = "Must be between 7 and 30"
+    error_message = "Must be between 7 and 30."
   }
 }
 
