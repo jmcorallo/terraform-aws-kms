@@ -6,7 +6,7 @@ variable "use_aws_key_material" {
   default     = true
 }
 
-variable "enabled" {
+variable "is_enabled" {
   description = "Specifies whether the key is enabled"
   type        = bool
   default     = true
@@ -18,7 +18,7 @@ variable "alias" {
   default     = ""
 
   validation {
-    condition     = var.alias == "" || can(regex("^alias\/.+", var.alias))
+    condition     = var.alias == "" || can(regex("alias\\/.+", var.alias))
     error_message = "The name must start with the word 'alias' followed by a forward slash."
   }
 }

@@ -1,5 +1,5 @@
 locals {
-  key_id = var.use_aws_key_material ? aws_kms_key.this[0].key_id : aws_kms_external_key.this[0].key_id
+  key_id = var.use_aws_key_material ? aws_kms_key.this[0].key_id : aws_kms_external_key.this[0].id
   arn    = var.use_aws_key_material ? aws_kms_key.this[0].arn : aws_kms_external_key.this[0].arn
 }
 
