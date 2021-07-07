@@ -6,7 +6,7 @@ variable "use_aws_key_material" {
   default     = true
 }
 
-variable "enabled" {
+variable "is_enabled" {
   description = "Specifies whether the key is enabled"
   type        = bool
   default     = true
